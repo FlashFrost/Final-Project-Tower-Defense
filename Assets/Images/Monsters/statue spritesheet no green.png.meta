@@ -1,0 +1,868 @@
+fileFormatVersion: 2
+guid: c9102f6e702586e41ab8fac7dfef1e48
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8839322826216970059
+    second: statue spritesheet no green_0
+  - first:
+      213: 2547104721445544677
+    second: statue spritesheet no green_1
+  - first:
+      213: 8362825370582986561
+    second: statue spritesheet no green_2
+  - first:
+      213: -7435873109358226190
+    second: statue spritesheet no green_3
+  - first:
+      213: 6502942212754349011
+    second: statue spritesheet no green_4
+  - first:
+      213: 6235317436803568701
+    second: statue spritesheet no green_5
+  - first:
+      213: 6892056203361646530
+    second: statue spritesheet no green_6
+  - first:
+      213: 3078398664894436612
+    second: statue spritesheet no green_7
+  - first:
+      213: 4251673955556538105
+    second: statue spritesheet no green_8
+  - first:
+      213: 3994456160168314983
+    second: statue spritesheet no green_9
+  - first:
+      213: 3939789465694694153
+    second: statue spritesheet no green_10
+  - first:
+      213: 4668440164630436232
+    second: statue spritesheet no green_11
+  - first:
+      213: 6636720181012016651
+    second: statue spritesheet no green_12
+  - first:
+      213: -1218401344597909619
+    second: statue spritesheet no green_13
+  - first:
+      213: -5585587216091507379
+    second: statue spritesheet no green_14
+  - first:
+      213: -3698062649057013478
+    second: statue spritesheet no green_15
+  - first:
+      213: -971770953287142691
+    second: statue spritesheet no green_16
+  - first:
+      213: 1639400222440349314
+    second: statue spritesheet no green_17
+  - first:
+      213: -5899001596477307978
+    second: statue spritesheet no green_18
+  - first:
+      213: -8452347951180612064
+    second: statue spritesheet no green_19
+  - first:
+      213: -4913078042672904975
+    second: statue spritesheet no green_20
+  - first:
+      213: -1994054784611424737
+    second: statue spritesheet no green_21
+  - first:
+      213: 6576221544049584040
+    second: statue spritesheet no green_22
+  - first:
+      213: 4510597602558171151
+    second: statue spritesheet no green_23
+  - first:
+      213: 8597162190328267433
+    second: statue spritesheet no green_24
+  - first:
+      213: -7125963257686058450
+    second: statue spritesheet no green_25
+  - first:
+      213: -5258374710383862054
+    second: statue spritesheet no green_26
+  - first:
+      213: -45409683648625072
+    second: statue spritesheet no green_27
+  - first:
+      213: -8866375216196653270
+    second: statue spritesheet no green_28
+  - first:
+      213: 1311137900102022479
+    second: statue spritesheet no green_29
+  - first:
+      213: -6124318312667501692
+    second: statue spritesheet no green_30
+  - first:
+      213: -5319538368155153536
+    second: statue spritesheet no green_31
+  - first:
+      213: 359903788238300038
+    second: statue spritesheet no green_32
+  - first:
+      213: 6602195836580720423
+    second: statue spritesheet no green_33
+  - first:
+      213: -4954264880007489031
+    second: statue spritesheet no green_34
+  - first:
+      213: -4981866573705468935
+    second: statue spritesheet no green_35
+  - first:
+      213: 1022843771185296215
+    second: statue spritesheet no green_36
+  - first:
+      213: -4085751827644434896
+    second: statue spritesheet no green_37
+  - first:
+      213: -4138253397177299779
+    second: statue spritesheet no green_38
+  - first:
+      213: -8036815839877544508
+    second: statue spritesheet no green_39
+  - first:
+      213: 6723357484153713016
+    second: statue spritesheet no green_40
+  - first:
+      213: 3646556529507363104
+    second: statue spritesheet no green_41
+  - first:
+      213: 4703125801147252822
+    second: statue spritesheet no green_42
+  - first:
+      213: -7341742979188900505
+    second: statue spritesheet no green_43
+  - first:
+      213: -1576506912317678732
+    second: statue spritesheet no green_44
+  - first:
+      213: 628920017035812098
+    second: statue spritesheet no green_45
+  - first:
+      213: 2209287670022622112
+    second: statue spritesheet no green_46
+  - first:
+      213: 7489937800360583390
+    second: statue spritesheet no green_47
+  - first:
+      213: -1287584557599298093
+    second: statue spritesheet no green_48
+  - first:
+      213: -4254184502638482258
+    second: statue spritesheet no green_49
+  - first:
+      213: 5261159431620334571
+    second: statue spritesheet no green_50
+  - first:
+      213: -1447803553098924892
+    second: statue spritesheet no green_51
+  - first:
+      213: 3910941064171540593
+    second: statue spritesheet no green_52
+  - first:
+      213: 628965383063424723
+    second: statue spritesheet no green_53
+  - first:
+      213: -5295371114258258805
+    second: statue spritesheet no green_54
+  - first:
+      213: -8516528981339397720
+    second: statue spritesheet no green_55
+  - first:
+      213: 7148624187293716196
+    second: statue spritesheet no green_56
+  - first:
+      213: 8141258825509056259
+    second: statue spritesheet no green_57
+  - first:
+      213: -562906074371603065
+    second: statue spritesheet no green_58
+  - first:
+      213: 6268813110627732053
+    second: statue spritesheet no green_59
+  - first:
+      213: -6478986610654924341
+    second: statue spritesheet no green_60
+  - first:
+      213: 5512618567611989300
+    second: statue spritesheet no green_61
+  - first:
+      213: -2215043597693983507
+    second: statue spritesheet no green_62
+  - first:
+      213: 8084974288383700349
+    second: statue spritesheet no green_63
+  - first:
+      213: -5462748068905883474
+    second: statue spritesheet no green_64
+  - first:
+      213: -8382829376167278227
+    second: statue spritesheet no green_65
+  - first:
+      213: 2832799300934526906
+    second: statue spritesheet no green_66
+  - first:
+      213: -4664963647351333620
+    second: statue spritesheet no green_67
+  - first:
+      213: -2709151943247792516
+    second: statue spritesheet no green_68
+  - first:
+      213: 686241913420030393
+    second: statue spritesheet no green_69
+  - first:
+      213: -4902170839167850172
+    second: statue spritesheet no green_70
+  - first:
+      213: 2074922062626466362
+    second: statue spritesheet no green_71
+  - first:
+      213: 6821909988959125429
+    second: statue spritesheet no green_72
+  - first:
+      213: 1897264029572589478
+    second: statue spritesheet no green_73
+  - first:
+      213: 7283085977283853431
+    second: statue spritesheet no green_74
+  - first:
+      213: -1837500889907614292
+    second: statue spritesheet no green_75
+  - first:
+      213: -8765222504134579035
+    second: statue spritesheet no green_76
+  - first:
+      213: 5581204291930054954
+    second: statue spritesheet no green_77
+  - first:
+      213: 4212208779518124181
+    second: statue spritesheet no green_78
+  - first:
+      213: -7172177836278355543
+    second: statue spritesheet no green_79
+  - first:
+      213: 1966995272582105062
+    second: statue spritesheet no green_80
+  - first:
+      213: -4778361906082403667
+    second: statue spritesheet no green_81
+  - first:
+      213: -6156135577448367102
+    second: statue spritesheet no green_82
+  - first:
+      213: 8552087364776242422
+    second: statue spritesheet no green_83
+  - first:
+      213: -5610365187900292790
+    second: statue spritesheet no green_84
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: statue spritesheet no green_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8e558e8ba645580800000000000000
+      internalID: -8839322826216970059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e26b7fbf32295320800000000000000
+      internalID: 2547104721445544677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f293ccd59be0470800000000000000
+      internalID: 8362825370582986561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4d2d1ddc87ec890800000000000000
+      internalID: -7435873109358226190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db9d1a0d771f3a50800000000000000
+      internalID: 6502942212754349011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34d9723c2c488650800000000000000
+      internalID: 6235317436803568701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7f56de99085af50800000000000000
+      internalID: 6892056203361646530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405d112964ba8ba20800000000000000
+      internalID: 3078398664894436612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f63abdafeaf00b30800000000000000
+      internalID: 4251673955556538105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76804b1d6b82f6730800000000000000
+      internalID: 3994456160168314983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bee8825a1fca630800000000000000
+      internalID: 3939789465694694153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_11
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88996f36891a9c040800000000000000
+      internalID: 4668440164630436232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e23ee77dd5a1c50800000000000000
+      internalID: 6636720181012016651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f1265be6e571fe0800000000000000
+      internalID: -1218401344597909619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4517ea45020c72b0800000000000000
+      internalID: -5585587216091507379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1111d52d97ddacc0800000000000000
+      internalID: -3698062649057013478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2f64677739382f0800000000000000
+      internalID: -971770953287142691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed04ff0d150c610800000000000000
+      internalID: 1639400222440349314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b302806d49822ea0800000000000000
+      internalID: -5899001596477307978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ef0e3225a33ba80800000000000000
+      internalID: -8452347951180612064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4c5b00d8d31dbb0800000000000000
+      internalID: -4913078042672904975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1661940db1b354e0800000000000000
+      internalID: -1994054784611424737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statue spritesheet no green_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7a859e6ae634b50800000000000000
+      internalID: 6576221544049584040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
