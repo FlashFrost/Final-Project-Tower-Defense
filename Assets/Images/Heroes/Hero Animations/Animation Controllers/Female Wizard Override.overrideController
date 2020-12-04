@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Female Wizard Override
+  m_Controller: {fileID: 9100000, guid: 4d777a4afc8c50643b72ac1e2d97cc69, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c9dc933c4cf4da24bb878e30cb9f423e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ca52b37d123527740ab581d1e168f064, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 284656b091d78ff4c9af6979c1725566, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5d1ac4d922954954aa64e3eecb274b37, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6bd0d505dc9a1e24bbf9a92aa37ebbd0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dab627c4535d28b4a801f885bcd9cfe4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4ea2733f48280b84f9737832235e4b83, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 42b8cdd9cd82914419fa4274074dd099, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 36c522eeeb80449498944b72efa6529b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: eeeb7ac8fcbfa53408dd8ea0d0635967, type: 2}

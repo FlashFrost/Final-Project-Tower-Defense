@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Female Cleric Override
+  m_Controller: {fileID: 9100000, guid: 3193a274125cfd34e9149f81c6b9d476, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 528b500d74c36184a94a00469a08c86e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d11d6e40de6a97a4d850ac63ba0befc0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 123ab4dd2b2bf6042b694a26a147ed04, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 77b77dae42d758842bb4d0e97574c9fc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 52ce4d5c99034624a83f7a7a302d3767, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1c2c405368b47da45835998721d78953, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 99b03bc1a0e81b042a63124fd7c91089, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 91e9a1bb5598db841b14f7827a0c6b4c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b6bfc171c3303094abd1978f2d8b797a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fc01117b0422e144c9e916f2c885a62a, type: 2}
