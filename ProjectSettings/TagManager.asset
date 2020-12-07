@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cleric
+  - Rogue
+  - Warrior
+  - Ranger
+  - Wizard
+  - Enemy
   layers:
   - Default
   - TransparentFX
