@@ -15,6 +15,12 @@ public class Hero : MonoBehaviour
 
     public HeroType MyType;
 
+    public int Damage;
+    public int Range;
+    public int AttackSpeed;
+    public int Level;
+    public int Experience;
+
     // Update is called once per frame
     void Update()
     {
