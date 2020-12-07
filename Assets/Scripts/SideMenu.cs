@@ -9,7 +9,12 @@ public class SideMenu : MonoBehaviour
 
     public Image Picture;
 
+    [Header("Sprites")]
+    public Sprite ClericSprite;
+    public Sprite RangerSprite;
     public Sprite RogueSprite;
+    public Sprite WarriorSprite;
+    public Sprite WizardSprite;
 
     public SideMenu()
     {
@@ -21,8 +26,27 @@ public class SideMenu : MonoBehaviour
         
     }
 
-    public void SetRogue()
+    public void Set(Hero h)
     {
-        Picture.sprite = RogueSprite;
+        if (h.MyType == Hero.HeroType.Rogue)
+        {
+            Picture.sprite = RogueSprite;
+        }
+        else if (h.MyType == Hero.HeroType.Ranger)
+        {
+            Picture.sprite = RangerSprite;
+        }
+        else if (h.MyType == Hero.HeroType.Cleric)
+        {
+            Picture.sprite = ClericSprite;
+        }
+        else if (h.MyType == Hero.HeroType.Warrior)
+        {
+            Picture.sprite = WarriorSprite;
+        }
+        else if (h.MyType == Hero.HeroType.Wizard)
+        {
+            Picture.sprite = WizardSprite;
+        }
     }
 }
