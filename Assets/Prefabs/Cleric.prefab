@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyType: 0
+  Image: {fileID: -2551392488480896889, guid: bdcef770c45ea1c419ba49507e2af48c, type: 3}
+  Name: Cleric
   Damage: 5
   Range: 10
   AttackSpeed: 10

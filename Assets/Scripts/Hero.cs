@@ -15,6 +15,8 @@ public class Hero : MonoBehaviour
 
     public HeroType MyType;
 
+    public Sprite Image;
+    public string Name;
     public int Damage;
     public int Range;
     public int AttackSpeed;

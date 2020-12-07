@@ -15,13 +15,6 @@ public class SideMenu : MonoBehaviour
     public Text Level;
     public Text Experience;
 
-    [Header("Sprites")]
-    public Sprite ClericSprite;
-    public Sprite RangerSprite;
-    public Sprite RogueSprite;
-    public Sprite WarriorSprite;
-    public Sprite WizardSprite;
-
     public GameObject RangeTracker;
 
     private Hero SelectedHero;
@@ -46,32 +39,9 @@ public class SideMenu : MonoBehaviour
             return;
         }
         gameObject.SetActive(true);
-
-        if (h.MyType == Hero.HeroType.Rogue)
-        {
-            Picture.sprite = RogueSprite;
-            Name.text = "Rogue";
-        }
-        else if (h.MyType == Hero.HeroType.Ranger)
-        {
-            Picture.sprite = RangerSprite;
-            Name.text = "Ranger";
-        }
-        else if (h.MyType == Hero.HeroType.Cleric)
-        {
-            Picture.sprite = ClericSprite;
-            Name.text = "Cleric";
-        }
-        else if (h.MyType == Hero.HeroType.Warrior)
-        {
-            Picture.sprite = WarriorSprite;
-            Name.text = "Warrior";
-        }
-        else if (h.MyType == Hero.HeroType.Wizard)
-        {
-            Picture.sprite = WizardSprite;
-            Name.text = "Wizard";
-        }
+        
+        Picture.sprite = h.Image;
+        Name.text = h.Name;
 
         Damage.text = "Damage:\t\t\t" + h.Damage.ToString();
         Range.text = "Range:\t\t\t\t" + h.Range.ToString();
