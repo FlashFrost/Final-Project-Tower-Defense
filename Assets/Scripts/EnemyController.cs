@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
 
     public SpriteRenderer sr;
 
+    public int BaseDamage = 0;
+
     // Update is called once per frame
     void Update()
     {
@@ -31,7 +33,12 @@ public class EnemyController : MonoBehaviour
         if (vectorToGo.magnitude < 0.1)
         {
             _currentTarget = PathingController.GetNextTarget(_currentTarget);
-            if (_currentTarget == null) return;
+            if (_currentTarget == null)
+            {
+                //than hit the end
+                LevelController.Instance.HitBase(BaseDamage);
+                return;
+            }
             vectorToGo = (_currentTarget.transform.position - gameObject.transform.position);
         }
 
