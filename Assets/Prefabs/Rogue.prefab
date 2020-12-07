@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7462856459977927925}
   - component: {fileID: 7462856459977927924}
   - component: {fileID: 7462856459977927880}
-  - component: {fileID: 7462856459977927881}
+  - component: {fileID: 6689638684931921875}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Untagged
@@ -179,7 +179,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &7462856459977927881
+--- !u!114 &6689638684931921875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,12 +188,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7462856459977927883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152874fbc0f2df64aa6d57773f890837, type: 3}
+  m_Script: {fileID: 11500000, guid: b18fed0b5133e4a439eeb54bffcbf250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MyType: 2
   Damage: 5
-  Range: 10
+  Range: 15
   AttackSpeed: 20
   Level: 0
   Experience: 0
