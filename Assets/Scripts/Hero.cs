@@ -22,6 +22,8 @@ public class Hero : MonoBehaviour
     public int AttackSpeed;
     public int Level;
     public int Experience;
+    public int Health;
+    public int AttackSplashRange;
 
     // Update is called once per frame
     void Update()
@@ -32,5 +34,19 @@ public class Hero : MonoBehaviour
     void OnMouseDown()
     {
         SideMenu.Instance.Set(this);
+    }
+
+    public void HeroLevelUp()
+    {
+        if(MyType == HeroType.Cleric)
+        {
+            Damage += 2;
+            Range += 1;
+            AttackSpeed += 1;
+        }
+        else if(MyType == HeroType.Ranger)
+        {
+            //Complete these.
+        }
     }
 }
