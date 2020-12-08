@@ -57,4 +57,14 @@ public class Hero : MonoBehaviour
             //Complete these.
         }
     }
+
+    public void Hit(int damage)
+    {
+        Health -= damage;
+        if (Health <= 0)
+        {
+            Health = 0;
+            //handle animation and other death logic here
+        }
+    }
 }

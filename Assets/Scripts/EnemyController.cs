@@ -11,16 +11,17 @@ public class EnemyController : MonoBehaviour
     public Animator animator;
 
     public bool Attacking = false;
+    private bool _attackLock = false;
+    public int CurrentSpeed = 5;
 
-    public int BaseDamage = 0;
     public int Health = 25;
-    public int movementSpeed = 5;
+    public int MovementSpeed = 5;
     public int AttackSpeed = 10;
     public int EXPValue = 10;
-    public int HeroDamage = 5;
+    public int Damage = 5;
     public int goldValue = 1;
 
-    public Hero CurrentTarget = null;
+    public Hero CurrentHero = null;
 
     // Update is called once per frame
     void Update()
@@ -46,41 +47,61 @@ public class EnemyController : MonoBehaviour
             _currentTarget = PathingController.GetNextTarget(_currentTarget);
             if (_currentTarget == null)
             {
-                //than hit the end
-                LevelController.Instance.HitBase(BaseDamage);
+                //Player looses, code needs to go here
                 return;
             }
+
             vectorToGo = (_currentTarget.transform.position - gameObject.transform.position);
         }
 
-        gameObject.transform.position += Vector3.Normalize(vectorToGo) * (movementSpeed / 1000f);
+        gameObject.transform.position += Vector3.Normalize(vectorToGo) * (CurrentSpeed / 1000f);
         sr.flipX = vectorToGo.x < 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        movementSpeed = 0;
+        CurrentHero = collision.GetComponent<Hero>();
+        
+        if (CurrentHero.Health != 0)
+        {
+            CurrentSpeed = 0;
 
-        //Debug.Log(collision.GetComponent<Collider>().gameObject.name);
-
-        Attacking = true;
-        StartCoroutine(StartAttackSequence());
+            Attacking = true;
+            StartCoroutine(StartAttackSequence());
+        }
+        else
+        {
+            CurrentHero = null;
+        }
     }
 
     IEnumerator StartAttackSequence()
     {
+        if (_attackLock) yield break;
+        _attackLock = true;
+
         while (Attacking)
         {
-            //TODO: actually deal damage to hero here
-            animator.SetTrigger("Attack");
-            if (AttackSpeed <= 0)
+            if (CurrentHero.Health == 0)
             {
                 Attacking = false;
+                CurrentSpeed = MovementSpeed;
             }
             else
             {
-                yield return new WaitForSeconds(20 / AttackSpeed);
+                CurrentHero.Hit(Damage);
+                animator.SetTrigger("Attack");
+                if (AttackSpeed <= 0)
+                {
+                    Attacking = false;
+                }
+                else
+                {
+                    yield return new WaitForSeconds(20 / AttackSpeed);
+                }
             }
         }
+
+        _attackLock = false;
     }
 }

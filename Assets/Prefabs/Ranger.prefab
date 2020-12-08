@@ -199,3 +199,6 @@ MonoBehaviour:
   AttackSpeed: 10
   Level: 0
   Experience: 0
+  Health: 30
+  AttackSplashRange: 0
+  HealAbility: 0

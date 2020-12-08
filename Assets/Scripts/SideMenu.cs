@@ -14,6 +14,7 @@ public class SideMenu : MonoBehaviour
     public Text AttackSpeed;
     public Text Level;
     public Text Experience;
+    public Text Health;
 
     public GameObject RangeTracker;
 
@@ -26,34 +27,33 @@ public class SideMenu : MonoBehaviour
     
     void Update()
     {
-        
+        Picture.sprite = SelectedHero.Image;
+        Name.text = SelectedHero.Name;
+
+        Damage.text = "Damage:\t\t\t" + SelectedHero.Damage.ToString();
+        Range.text = "Range:\t\t\t\t" + SelectedHero.Range.ToString();
+        AttackSpeed.text = "Attack Speed:\t" + SelectedHero.AttackSpeed.ToString();
+        Health.text = "Health:\t\t\t\t" + SelectedHero.Health.ToString();
+
+        Level.text = "Level:\t\t\t\t" + SelectedHero.Level.ToString();
+        Experience.text = "Experience:\t\t" + SelectedHero.Experience.ToString();
+
+        RangeTracker.transform.position = SelectedHero.transform.position;
+
+        RangeTracker.transform.localScale -= RangeTracker.transform.localScale;
+        RangeTracker.transform.localScale += new Vector3(SelectedHero.Range, SelectedHero.Range, 1);
     }
 
     public void Set(Hero h)
     {
         SelectedHero = h;
 
-        if (h == null)
+        if (SelectedHero == null)
         {
             gameObject.SetActive(false);
             return;
         }
         gameObject.SetActive(true);
-        
-        Picture.sprite = h.Image;
-        Name.text = h.Name;
-
-        Damage.text = "Damage:\t\t\t" + h.Damage.ToString();
-        Range.text = "Range:\t\t\t\t" + h.Range.ToString();
-        AttackSpeed.text = "Attack Speed:\t" + h.AttackSpeed.ToString();
-
-        Level.text = "Level:\t\t\t\t" + h.Level.ToString();
-        Experience.text = "Experience:\t\t" + h.Experience.ToString();
-
-        RangeTracker.transform.position = h.transform.position;
-
-        RangeTracker.transform.localScale -= RangeTracker.transform.localScale;
-        RangeTracker.transform.localScale += new Vector3(h.Range, h.Range, 1);
     }
 
 }

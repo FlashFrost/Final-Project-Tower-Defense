@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
+    //TODO: remove health from here
     public Text HealthText;
     public int HealthRemaining = 100;
 
@@ -19,10 +20,5 @@ public class LevelController : MonoBehaviour
     void Update()
     {
         HealthText.text = HealthRemaining.ToString();
-    }
-
-    public void HitBase(int damage)
-    {
-        HealthRemaining -= damage;
     }
 }
