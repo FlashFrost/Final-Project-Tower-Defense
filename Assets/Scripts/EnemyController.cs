@@ -8,13 +8,19 @@ public class EnemyController : MonoBehaviour
     private bool started = false;
 
     public SpriteRenderer sr;
+    public Animator animator;
+
+    public bool Attacking = false;
 
     public int BaseDamage = 0;
     public int Health = 25;
-    public float movementSpeed = 0.05f;
+    public int movementSpeed = 5;
+    public int AttackSpeed = 10;
     public int EXPValue = 10;
     public int HeroDamage = 5;
     public int goldValue = 1;
+
+    public Hero CurrentTarget = null;
 
     // Update is called once per frame
     void Update()
@@ -47,7 +53,34 @@ public class EnemyController : MonoBehaviour
             vectorToGo = (_currentTarget.transform.position - gameObject.transform.position);
         }
 
-        gameObject.transform.position += Vector3.Normalize(vectorToGo) * 0.005f;
+        gameObject.transform.position += Vector3.Normalize(vectorToGo) * (movementSpeed / 1000f);
         sr.flipX = vectorToGo.x < 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        movementSpeed = 0;
+
+        //Debug.Log(collision.GetComponent<Collider>().gameObject.name);
+
+        Attacking = true;
+        StartCoroutine(StartAttackSequence());
+    }
+
+    IEnumerator StartAttackSequence()
+    {
+        while (Attacking)
+        {
+            //TODO: actually deal damage to hero here
+            animator.SetTrigger("Attack");
+            if (AttackSpeed <= 0)
+            {
+                Attacking = false;
+            }
+            else
+            {
+                yield return new WaitForSeconds(20 / AttackSpeed);
+            }
+        }
     }
 }
