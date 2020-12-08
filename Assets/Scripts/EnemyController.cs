@@ -13,6 +13,8 @@ public class EnemyController : MonoBehaviour
     public int Health = 25;
     public float movementSpeed = 0.05f;
     public int EXPValue = 10;
+    public int HeroDamage = 5;
+    public int goldValue = 1;
 
     // Update is called once per frame
     void Update()

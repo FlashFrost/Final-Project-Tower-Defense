@@ -24,6 +24,8 @@ public class Hero : MonoBehaviour
     public int Experience;
     public int Health;
     public int AttackSplashRange;
+    public int HealAbility = 0;
+    private int reviveCost = 50;
 
     // Update is called once per frame
     void Update()
@@ -40,9 +42,15 @@ public class Hero : MonoBehaviour
     {
         if(MyType == HeroType.Cleric)
         {
+            Health += 15;
             Damage += 2;
             Range += 1;
             AttackSpeed += 1;
+            Level += 1;
+            if(Level >= 1)
+            {
+                HealAbility += 5;
+            }
         }
         else if(MyType == HeroType.Ranger)
         {
