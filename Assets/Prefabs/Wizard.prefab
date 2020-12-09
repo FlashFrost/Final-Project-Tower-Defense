@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyType: 4
+  ImageFemale: {fileID: 0}
+  ImageMale: {fileID: 0}
   Image: {fileID: -2442318890399168463, guid: facb17cb4ee4a6745be9e4df77313e05, type: 3}
   Name: Wizard
   Damage: 15
@@ -199,6 +201,7 @@ MonoBehaviour:
   AttackSpeed: 15
   Level: 0
   Experience: 0
+  MaxHealth: 0
   Health: 15
   AttackSplashRange: 0
   HealAbility: 0

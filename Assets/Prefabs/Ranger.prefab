@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyType: 1
+  ImageFemale: {fileID: 0}
+  ImageMale: {fileID: 0}
   Image: {fileID: 298497996466035586, guid: e8ba8e3bf4df13845bb094fab0066eb0, type: 3}
   Name: Ranger
   Damage: 10
@@ -199,6 +201,7 @@ MonoBehaviour:
   AttackSpeed: 10
   Level: 0
   Experience: 0
+  MaxHealth: 0
   Health: 30
   AttackSplashRange: 0
   HealAbility: 0

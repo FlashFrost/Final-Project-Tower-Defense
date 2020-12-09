@@ -22,15 +22,14 @@ public class Hero : MonoBehaviour
     public int AttackSpeed;
     public int Level;
     public int Experience;
-    public int maxHealth;
+    public int MaxHealth;
     public int Health;
     public int AttackSplashRange;
     public int HealAbility = 0;
 
-
     private int reviveCost = 50;
     private Animator animator;
-    private bool randomGender; //True for Male, False for Female.
+    private bool Gender;
 
     private void Start()
     {
@@ -52,7 +51,7 @@ public class Hero : MonoBehaviour
     {
         if(MyType == HeroType.Cleric)
         {
-            maxHealth += 15;
+            MaxHealth += 15;
             Health += 15;
             Damage += 2;
             Level += 1;
@@ -63,7 +62,7 @@ public class Hero : MonoBehaviour
         }
         else if(MyType == HeroType.Ranger)
         {
-            maxHealth += 15;
+            MaxHealth += 15;
             Health += 15;
             Damage += 2;
             AttackSpeed += 1;
@@ -75,7 +74,7 @@ public class Hero : MonoBehaviour
         }
         else if(MyType == HeroType.Warrior)
         {
-            maxHealth += 15;
+            MaxHealth += 15;
             Health += 15;
             Damage += 2;
             Range += 1;
@@ -88,7 +87,7 @@ public class Hero : MonoBehaviour
         }
         else if(MyType == HeroType.Rogue)
         {
-            maxHealth += 15;
+            MaxHealth += 15;
             Health += 15;
             Damage += 2;
             Range += 1;
@@ -101,7 +100,7 @@ public class Hero : MonoBehaviour
         }
         else if(MyType == HeroType.Wizard)
         {
-            maxHealth += 15;
+            MaxHealth += 15;
             Health += 15;
             Damage += 2;
             Range += 1;

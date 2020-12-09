@@ -85,7 +85,7 @@ public class EnemyController : MonoBehaviour
             CurrentSpeed = 0;
 
             Attacking = true;
-            StartCoroutine(StartAttackSequence());
+            StartCoroutine(AttackSequence());
         }
         else
         {
@@ -93,7 +93,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    IEnumerator StartAttackSequence()
+    IEnumerator AttackSequence()
     {
         if (_attackLock) yield break;
         _attackLock = true;

@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyType: 0
+  ImageFemale: {fileID: 0}
+  ImageMale: {fileID: 0}
   Image: {fileID: -2551392488480896889, guid: bdcef770c45ea1c419ba49507e2af48c, type: 3}
   Name: Cleric
   Damage: 5
@@ -199,7 +201,7 @@ MonoBehaviour:
   AttackSpeed: 10
   Level: 0
   Experience: 0
-  maxHealth: 0
+  MaxHealth: 0
   Health: 20
   AttackSplashRange: 0
   HealAbility: 0

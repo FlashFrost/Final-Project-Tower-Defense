@@ -192,13 +192,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyType: 2
-  Image: {fileID: -6502898871431328125, guid: f6f514eb52025ac4cb0437ebddc76ce7, type: 3}
+  Image: {fileID: -5920187221140060509, guid: f6f514eb52025ac4cb0437ebddc76ce7, type: 3}
   Name: Rogue
   Damage: 5
   Range: 15
   AttackSpeed: 20
   Level: 0
   Experience: 0
+  MaxHealth: 0
   Health: 20
   AttackSplashRange: 0
   HealAbility: 0
