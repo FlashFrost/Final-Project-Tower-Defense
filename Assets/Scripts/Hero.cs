@@ -28,6 +28,7 @@ public class Hero : MonoBehaviour
     public int HealAbility = 0;
 
     public StartableLocation Position;
+    public GameObject myDetectionRing;
 
 
     private int reviveCost = 50;
@@ -38,6 +39,7 @@ public class Hero : MonoBehaviour
 
     private void Start()
     {
+        myDetectionRing.transform.localScale = new Vector3(Range, Range, 1);
         animator = GetComponent<Animator>();
         MaxHealth = Health;
     }
