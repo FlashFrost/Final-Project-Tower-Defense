@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1528511521089283124}
   - component: {fileID: 1528511521089283125}
   m_Layer: 0
-  m_Name: Cleric
+  m_Name: Female Cleric
   m_TagString: Cleric
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ Animator:
   m_GameObject: {fileID: 1528511521089283123}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 498a19f9e339b934a8e6b9a9d2ec961c, type: 2}
+  m_Controller: {fileID: 22100000, guid: 7145357c3b9efeb4abae1174bd63629c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -199,7 +199,6 @@ MonoBehaviour:
   AttackSpeed: 10
   Level: 0
   Experience: 0
-  maxHealth: 0
   Health: 20
   AttackSplashRange: 0
   HealAbility: 0

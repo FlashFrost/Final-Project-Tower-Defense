@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     private bool started = false;
 
     public SpriteRenderer sr;
-    public Animator animator;
+    private Animator animator;
 
     public bool Attacking = false;
     private bool _attackLock = false;
@@ -23,9 +23,27 @@ public class EnemyController : MonoBehaviour
 
     public Hero CurrentHero = null;
 
+    private bool delaying = false;
+    private int delayTimer = 10;
+    private int currentDelay = 0;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if(delaying)    // Let the Hero die before continuing to move.
+        {
+            currentDelay++;
+            if(currentDelay >= delayTimer)
+            {
+                CurrentSpeed = MovementSpeed;
+                delaying = false;
+                currentDelay = 0;
+            }
+        }
         //start it off targeting the first target node
         if (_currentTarget == null)
         {
@@ -85,7 +103,7 @@ public class EnemyController : MonoBehaviour
             if (CurrentHero.Health == 0)
             {
                 Attacking = false;
-                CurrentSpeed = MovementSpeed;
+                delaying = true;
             }
             else
             {
