@@ -47,3 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Units
+    uniqueID: 2781487517
+    locked: 0
+  - name: Monsters
+    uniqueID: 1490576871
+    locked: 0

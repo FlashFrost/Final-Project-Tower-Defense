@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1957569066287794105}
   - component: {fileID: 8849119607418842413}
   - component: {fileID: 4158381969666711454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Old Statue
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -118,8 +118,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1490576871
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

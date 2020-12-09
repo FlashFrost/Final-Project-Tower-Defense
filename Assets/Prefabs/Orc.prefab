@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1227626311074737688}
   - component: {fileID: 2622562555531938566}
   - component: {fileID: 184794590557838877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orc
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -120,8 +120,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1490576871
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -166,12 +166,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 7052320540024735576}
-  BaseDamage: 0
+  Attacking: 0
+  CurrentSpeed: 5
   Health: 25
-  movementSpeed: 5
+  MovementSpeed: 5
+  AttackSpeed: 10
   EXPValue: 10
-  HeroDamage: 5
+  Damage: 5
   goldValue: 1
+  CurrentHero: {fileID: 0}
 --- !u!61 &184794590557838877
 BoxCollider2D:
   m_ObjectHideFlags: 0

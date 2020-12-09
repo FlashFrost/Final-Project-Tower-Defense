@@ -57,7 +57,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Female-Rogue-Death
+  m_Name: Male-Rogue-Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -71,7 +71,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7772f1a5d9e4ac3418307b7858136867, type: 2}
+  m_Motion: {fileID: 7400000, guid: d2537d66bf3d9044597ea217741f538b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -184,7 +184,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Female-Rogue-Walk
+  m_Name: Male-Rogue-Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -198,7 +198,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cb270f4c04868294d85b73c501d24f51, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0e5aed8a1cc7f304baef4b0a303e4b80, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -263,7 +263,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Female-Rogue-Idle-Interrupt
+  m_Name: Male-Rogue-Idle-Interrupt
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -277,7 +277,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5e2648c8cc9e9ca4eb3b8d5ef1f4da87, type: 2}
+  m_Motion: {fileID: 7400000, guid: 79b90f9110fcb0d4cbd02326afdc6266, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -290,7 +290,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Female-Rogue-Attack
+  m_Name: Male-Rogue-Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -304,7 +304,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6fbfef2796f10874ab14becbcca2bb83, type: 2}
+  m_Motion: {fileID: 7400000, guid: 75c3de01c157b42459f5130e8f257164, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -317,7 +317,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Female-Rogue-Idle
+  m_Name: Male-Rogue-Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -334,7 +334,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 79f901bec8450fa4c94054f55fd5f83e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 11ff2086483f37c48838ff9f36787136, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
