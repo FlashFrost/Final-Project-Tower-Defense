@@ -13,7 +13,6 @@ public class SideMenu : MonoBehaviour
     public Text Range;
     public Text AttackSpeed;
     public Text Level;
-    public Text Experience;
     public Text Health;
 
     public GameObject RangeTracker;
@@ -33,10 +32,9 @@ public class SideMenu : MonoBehaviour
         Damage.text = "Damage:\t\t\t" + SelectedHero.Damage.ToString();
         Range.text = "Range:\t\t\t\t" + SelectedHero.Range.ToString();
         AttackSpeed.text = "Attack Speed:\t" + SelectedHero.AttackSpeed.ToString();
-        Health.text = "Health:\t\t\t\t" + SelectedHero.Health.ToString();
+        Health.text = "\t\t\t" + SelectedHero.Health.ToString();
 
         Level.text = "Level:\t\t\t\t" + SelectedHero.Level.ToString();
-        Experience.text = "Experience:\t\t" + SelectedHero.Experience.ToString();
 
         RangeTracker.transform.position = SelectedHero.transform.position;
 
