@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class LevelController : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class LevelController : MonoBehaviour
     [Header("Enemies")]
     public EnemyController Orc;
 
+    private List<Hero> _heroes;
+
     public LevelController()
     {
         Instance = this;
@@ -32,63 +35,69 @@ public class LevelController : MonoBehaviour
 
     void Start()
     {
+        StartButton.enabled = false;
         var random = new System.Random();
+        _heroes = new List<Hero>();
 
         //generate cleric
         if (random.Next(2) == 1)
         {
-            Instantiate(MaleCleric, new Vector3(-4, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(MaleCleric, new Vector3(-4, -8, -1), Quaternion.identity));
         }
         else
         {
-            Instantiate(FemaleCleric, new Vector3(-4, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(FemaleCleric, new Vector3(-4, -8, -1), Quaternion.identity));
         }
 
         //generate ranger
         if (random.Next(2) == 1)
         {
-            Instantiate(MaleRanger, new Vector3(-2, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(MaleRanger, new Vector3(-2, -8, -1), Quaternion.identity));
         }
         else
         {
-            Instantiate(FemaleRanger, new Vector3(-2, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(FemaleRanger, new Vector3(-2, -8, -1), Quaternion.identity));
         }
 
         //generate rogue
         if (random.Next(2) == 1)
         {
-            Instantiate(MaleRogue, new Vector3(0, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(MaleRogue, new Vector3(0, -8, -1), Quaternion.identity));
         }
         else
         {
-            Instantiate(FemaleRogue, new Vector3(0, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(FemaleRogue, new Vector3(0, -8, -1), Quaternion.identity));
         }
 
         //generate warrior
         if (random.Next(2) == 1)
         {
-            Instantiate(MaleWarrior, new Vector3(2, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(MaleWarrior, new Vector3(2, -8, -1), Quaternion.identity));
         }
         else
         {
-            Instantiate(FemaleWarrior, new Vector3(2, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(FemaleWarrior, new Vector3(2, -8, -1), Quaternion.identity));
         }
 
         //generate wizard
         if (random.Next(2) == 1)
         {
-            Instantiate(MaleWizard, new Vector3(4, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(MaleWizard, new Vector3(4, -8, -1), Quaternion.identity));
         }
         else
         {
-            Instantiate(FemaleWizard, new Vector3(4, -8, -1), Quaternion.identity);
+            _heroes.Add(Instantiate(FemaleWizard, new Vector3(4, -8, -1), Quaternion.identity));
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (_heroes.Count(x => x.Position == null) == 0)
+        {
+            StartButton.enabled = true;
+            StartButton.image.color = Color.yellow;
+        }
     }
 
     public void StartLevel()

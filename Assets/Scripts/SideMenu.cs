@@ -8,6 +8,7 @@ public class SideMenu : MonoBehaviour
     public static SideMenu Instance;
 
     public Image Picture;
+    public Image Backdrop;
     public Text Name;
     public Text Damage;
     public Text Range;
@@ -26,6 +27,15 @@ public class SideMenu : MonoBehaviour
     
     void Update()
     {
+        if (SelectedHero.Health > 0)
+        {
+            Backdrop.color = new Color(34/255f, 139/255f, 34/255f, 255/255f); //forest green
+        }
+        else
+        {
+            Backdrop.color = Color.red;
+        }
+
         Picture.sprite = SelectedHero.Image;
         Name.text = SelectedHero.Name;
 

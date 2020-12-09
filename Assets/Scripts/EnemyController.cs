@@ -78,6 +78,8 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Enemy") return;
+
         CurrentHero = collision.GetComponent<Hero>();
         
         if (CurrentHero.Health != 0)
@@ -100,7 +102,7 @@ public class EnemyController : MonoBehaviour
 
         while (Attacking)
         {
-            if (CurrentHero.Health == 0)
+            if (CurrentHero == null || CurrentHero.Health == 0)
             {
                 Attacking = false;
                 delaying = true;

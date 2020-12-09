@@ -27,6 +27,8 @@ public class Hero : MonoBehaviour
     public int AttackSplashRange;
     public int HealAbility = 0;
 
+    public StartableLocation Position;
+
     private int reviveCost = 50;
     private Animator animator;
     private bool Gender;
@@ -44,7 +46,15 @@ public class Hero : MonoBehaviour
 
     void OnMouseDown()
     {
-        SideMenu.Instance.Set(this);
+        if (LevelController.Instance.RunningLevel)
+        {
+            SideMenu.Instance.Set(this);
+        }
+        else if (Position == null)
+        {
+            HeroPlacement.Instance.gameObject.SetActive(true);
+            HeroPlacement.Instance.CurrentHero = this;
+        }
     }
 
     public void HeroLevelUp()
