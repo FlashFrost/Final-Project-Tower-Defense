@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(HeroAttackController))]
+
 public class Hero : MonoBehaviour
 {
     public enum HeroType
@@ -13,13 +15,20 @@ public class Hero : MonoBehaviour
         Wizard
     }
 
+    enum HeroState
+    {
+        Idle,
+        Attacking,
+        Cooldown
+    }
+
     public HeroType MyType;
 
     public Sprite Image;
     public string Name;
     public int Damage;
     public int Range;
-    public int AttackSpeed;
+    public float AttackSpeed; //Number of attacks per second.
     public int Level;
     public int Experience;
     public int MaxHealth;
@@ -33,41 +42,25 @@ public class Hero : MonoBehaviour
     private int reviveCost = 50;
     private Animator animator;
     private bool Gender;
-    private bool attacking;
+
     private const int monsterLayer = 8;
+    private HeroState myState;
+    private HeroAttackController attackController;
+    private WaitForSeconds cooldownTime;
 
     private void Start()
     {
         myDetectionRing.transform.localScale = new Vector3(Range, Range, 1);
         animator = GetComponent<Animator>();
         MaxHealth = Health;
+        myState = HeroState.Idle;
+        cooldownTime = new WaitForSeconds(1 / AttackSpeed);
+        attackController = GetComponent<HeroAttackController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!attacking)
-        {
-            CheckNearObjects();
-        }
-
-        if (attacking)
-        {
-
-        }
-    }
-
-    void CheckNearObjects()
-    {
-        Collider[] objects = Physics.OverlapSphere(transform.position, Range);
-
-        foreach (Collider unit in objects)
-        {
-            if (unit.tag == "Enemy")
-            {
-                //There are enemies in range, Choose a target to attack.
-            }
-        }
     }
 
     void OnMouseDown()
@@ -91,6 +84,7 @@ public class Hero : MonoBehaviour
             Health += 10;
             Damage += 1;
             Level += 1;
+            AttackSpeed += .25f;
             if(Level >= 1)
             {
                 HealAbility += 5;
@@ -102,6 +96,7 @@ public class Hero : MonoBehaviour
             Health += 5;
             Damage += 2;
             Level += 1;
+            AttackSpeed += .75f;
             if (Level >= 1)
             {
                 Range += 1;
@@ -114,6 +109,7 @@ public class Hero : MonoBehaviour
             Health += 15;
             Damage += 2;
             Level += 1;
+            AttackSpeed += .5f;
             if (Level >= 1)
             {
                 AttackSplashRange += 0.25f;
@@ -128,9 +124,10 @@ public class Hero : MonoBehaviour
             Health += 3;
             Damage += 1;
             Level += 1;
+            AttackSpeed += .25f;
             if (Level >= 1)
             {
-                AttackSpeed += 3;
+                AttackSpeed += 1f;
             }
         }
         else if(MyType == HeroType.Wizard)
@@ -138,6 +135,7 @@ public class Hero : MonoBehaviour
             MaxHealth += 1;
             Health += 1;
             Level += 1;
+            AttackSpeed += .25f;
             if (Level >= 1)
             {
                 Damage += 10;
@@ -156,4 +154,29 @@ public class Hero : MonoBehaviour
         }
     }
 
+    //Begin Combat handling code.
+    public void OnEnemyEnter()
+    {
+        if (myState != HeroState.Idle || Health == 0)
+        {
+            return;
+        }
+
+        TryAttack();
+    }
+    private void TryAttack()
+    {
+        if (!attackController.TryAttack())
+        {
+            return;
+        }
+        myState = HeroState.Cooldown;
+        StartCoroutine(CooldownTimer());
+    }
+    private IEnumerator CooldownTimer()
+    {
+        yield return cooldownTime;
+        myState = HeroState.Idle;
+        TryAttack();
+    }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4265421026245038801}
   m_Layer: 0
   m_Name: 'Detection Range '
-  m_TagString: Untagged
+  m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,8 @@ GameObject:
   - component: {fileID: 9171397203437783667}
   - component: {fileID: 9171397203437783666}
   - component: {fileID: 9171397203437783665}
+  - component: {fileID: -3922163349918619081}
+  - component: {fileID: -8899291241008900044}
   m_Layer: 0
   m_Name: Female  Rogue
   m_TagString: Rogue
@@ -296,7 +298,7 @@ MonoBehaviour:
   Name: Rogue
   Damage: 5
   Range: 15
-  AttackSpeed: 20
+  AttackSpeed: 5
   Level: 0
   Experience: 0
   MaxHealth: 0
@@ -305,3 +307,27 @@ MonoBehaviour:
   HealAbility: 0
   Position: {fileID: 0}
   myDetectionRing: {fileID: 9171397203406777333}
+--- !u!114 &-3922163349918619081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171397203437783664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d349830eb74194408a79192b75d2825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8899291241008900044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171397203437783664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22707c4ab31a6b84d9911f84fe5497e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

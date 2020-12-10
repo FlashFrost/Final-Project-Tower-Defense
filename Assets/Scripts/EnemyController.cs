@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy") return;
+        if (collision.tag == "Enemy" || collision.tag == "Detection") return;
 
         CurrentHero = collision.GetComponent<Hero>();
         
@@ -142,4 +142,16 @@ public class EnemyController : MonoBehaviour
         else
             return enemy1;
     }
+
+    public void getAttacked(int heroDamage, float heroSplash)
+    {
+        Health -= heroDamage;
+        determineSplash(heroSplash);
+    }
+
+    private void determineSplash(float splashRadius)
+    {
+
+    }
+
 }

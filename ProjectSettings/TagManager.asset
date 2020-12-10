@@ -10,6 +10,7 @@ TagManager:
   - Ranger
   - Wizard
   - Enemy
+  - Detection
   layers:
   - Default
   - TransparentFX

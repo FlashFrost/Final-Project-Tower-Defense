@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(HeroAttackController))]
 public class HeroTargettingController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,15 +17,19 @@ public class HeroTargettingController : MonoBehaviour
 
     private HeroState myState;
     HeroAttackController attackController;
+    private WaitForSeconds cooldownTime;
+    private Hero chosenOne;
 
     void Start()
     {
         myState = HeroState.Idle;
+        cooldownTime = new WaitForSeconds(1 / chosenOne.AttackSpeed);
+        chosenOne = GetComponent<Hero>();
     }
 
     public void OnEnemyEnter()
     {
-        if(myState != HeroState.Idle)
+        if(myState != HeroState.Idle || chosenOne.Health == 0)
         {
             return;
         }
@@ -46,11 +52,5 @@ public class HeroTargettingController : MonoBehaviour
         yield return cooldownTime;
         myState = HeroState.Idle;
         TryAttack();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

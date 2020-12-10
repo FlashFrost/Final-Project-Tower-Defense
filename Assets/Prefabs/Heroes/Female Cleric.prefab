@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 7780926931129363844}
   - component: {fileID: 7780926931129363851}
   - component: {fileID: 7780926931129363850}
+  - component: {fileID: 6671562310252233081}
+  - component: {fileID: -961293083595438781}
   m_Layer: 0
   m_Name: Female Cleric
   m_TagString: Cleric
@@ -197,7 +199,7 @@ MonoBehaviour:
   Name: Cleric
   Damage: 5
   Range: 10
-  AttackSpeed: 10
+  AttackSpeed: 0.5
   Level: 0
   Experience: 0
   MaxHealth: 0
@@ -206,6 +208,30 @@ MonoBehaviour:
   HealAbility: 0
   Position: {fileID: 0}
   myDetectionRing: {fileID: 7780926931963009150}
+--- !u!114 &6671562310252233081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780926931129363849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d349830eb74194408a79192b75d2825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-961293083595438781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780926931129363849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22707c4ab31a6b84d9911f84fe5497e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7780926931963009150
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +245,7 @@ GameObject:
   - component: {fileID: 6400844499305445731}
   m_Layer: 0
   m_Name: Detection Range
-  m_TagString: Untagged
+  m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

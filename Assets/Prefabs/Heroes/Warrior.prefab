@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 991096113787038791}
   - component: {fileID: 991096113787038904}
   - component: {fileID: 991096113787038905}
+  - component: {fileID: 4051251867803576490}
+  - component: {fileID: 1853936948038032987}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Warrior
@@ -197,7 +199,7 @@ MonoBehaviour:
   Name: Warrior
   Damage: 20
   Range: 5
-  AttackSpeed: 10
+  AttackSpeed: 1
   Level: 0
   Experience: 0
   MaxHealth: 0
@@ -206,6 +208,30 @@ MonoBehaviour:
   HealAbility: 0
   Position: {fileID: 0}
   myDetectionRing: {fileID: 991096114224791785}
+--- !u!114 &4051251867803576490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991096113787038906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d349830eb74194408a79192b75d2825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1853936948038032987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991096113787038906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22707c4ab31a6b84d9911f84fe5497e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &991096114224791785
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +245,7 @@ GameObject:
   - component: {fileID: 8448375093002132007}
   m_Layer: 0
   m_Name: 'Detection Range '
-  m_TagString: Untagged
+  m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

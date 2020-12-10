@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyDetector : MonoBehaviour
 {
-    HeroTargettingController myController;
+    Hero myController;
 
     private void Awake()
     {
-        myController = GetComponentInParent<HeroTargettingController>();
+        myController = GetComponentInParent<Hero>();
         if(myController == null)
         {
-            myController = transform.parent.gameObject.AddComponent<HeroTargettingController>();
+            myController = transform.parent.gameObject.AddComponent<Hero>();
             Debug.LogWarning("Warning! No controller on parent so default is added", gameObject);
         }
     }

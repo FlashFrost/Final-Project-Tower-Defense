@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[RequireComponent(typeof(Hero))]
 public class HeroAttackController : MonoBehaviour
 {
     private Collider2D attackRadius;
-    protected HeroTargettingController HeroController;
+    private Hero HeroController;
     private void Awake()
     {
         attackRadius = transform.Find("Detection Range").GetComponent<Collider2D>();
-        HeroController = GetComponent<HeroTargettingController>();
+        if(attackRadius == null)
+        {
+            Debug.LogWarning("Warning: Could not find the 2D collider.", gameObject);
+        }
+        HeroController = GetComponent<Hero>();
     }
 
     public bool TryAttack()
@@ -40,6 +45,6 @@ public class HeroAttackController : MonoBehaviour
 
     protected void Attack(EnemyController targetEnemy)
     {
-
+        targetEnemy.getAttacked(HeroController.Damage, HeroController.AttackSplashRange);
     }
 }

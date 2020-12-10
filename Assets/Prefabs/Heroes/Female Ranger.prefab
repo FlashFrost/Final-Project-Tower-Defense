@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7787005206375256811}
   m_Layer: 0
   m_Name: 'Detection Range '
-  m_TagString: Untagged
+  m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,8 @@ GameObject:
   - component: {fileID: 4176561502259464494}
   - component: {fileID: 4176561502259464495}
   - component: {fileID: 4176561502259464464}
+  - component: {fileID: -8543065114502917867}
+  - component: {fileID: -8859501120037302911}
   m_Layer: 0
   m_Name: Female Ranger
   m_TagString: Ranger
@@ -296,7 +298,7 @@ MonoBehaviour:
   Name: Ranger
   Damage: 10
   Range: 15
-  AttackSpeed: 10
+  AttackSpeed: 2
   Level: 0
   Experience: 0
   MaxHealth: 0
@@ -305,3 +307,27 @@ MonoBehaviour:
   HealAbility: 0
   Position: {fileID: 0}
   myDetectionRing: {fileID: 4176561502196584831}
+--- !u!114 &-8543065114502917867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176561502259464465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d349830eb74194408a79192b75d2825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8859501120037302911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176561502259464465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22707c4ab31a6b84d9911f84fe5497e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

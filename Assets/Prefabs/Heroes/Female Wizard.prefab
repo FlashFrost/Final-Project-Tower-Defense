@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1934561204306982642}
   m_Layer: 0
   m_Name: Detection Range
-  m_TagString: Untagged
+  m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,8 @@ GameObject:
   - component: {fileID: 6934218819307370782}
   - component: {fileID: 6934218819307370783}
   - component: {fileID: 6934218819307370780}
+  - component: {fileID: -6090317134217563562}
+  - component: {fileID: 5852839825478981095}
   m_Layer: 0
   m_Name: Female Wizard
   m_TagString: Wizard
@@ -296,7 +298,7 @@ MonoBehaviour:
   Name: Wizard
   Damage: 15
   Range: 10
-  AttackSpeed: 15
+  AttackSpeed: 1
   Level: 0
   Experience: 0
   MaxHealth: 0
@@ -305,3 +307,27 @@ MonoBehaviour:
   HealAbility: 0
   Position: {fileID: 0}
   myDetectionRing: {fileID: 6934218818143245512}
+--- !u!114 &-6090317134217563562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934218819307370781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d349830eb74194408a79192b75d2825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5852839825478981095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934218819307370781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22707c4ab31a6b84d9911f84fe5497e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
