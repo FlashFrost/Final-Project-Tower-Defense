@@ -28,6 +28,9 @@ public class EnemyController : MonoBehaviour
     private int delayTimer = 10;
     private int currentDelay = 0;
     private WaitForSeconds deathTimer;
+
+    //Variables for this class to handle but which other classes need to know.
+    private bool dead = false;
     private int targetsPassed = 0;
     private float percentToNextWaypoint = 0;
 
@@ -149,16 +152,20 @@ public class EnemyController : MonoBehaviour
             return enemy1;
     }
 
-    public void getAttacked(int heroDamage, float heroSplash)
+    public void getAttacked(int heroDamage)
     {
         Health -= heroDamage;
         if(Health <= 0)
         {
+            dead = true;
             CurrentSpeed = 0;
             animator.SetTrigger("Death");
             StartCoroutine(DeathTimer());
         }
-        determineSplash(heroSplash);
+    }
+    public bool IsDead()
+    {
+        return dead;
     }
 
     private IEnumerator DeathTimer()
@@ -166,10 +173,4 @@ public class EnemyController : MonoBehaviour
         yield return deathTimer;
         Destroy(gameObject);
     }
-
-    private void determineSplash(float splashRadius)
-    {
-
-    }
-
 }

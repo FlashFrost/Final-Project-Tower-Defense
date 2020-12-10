@@ -23,19 +23,19 @@ public class HeroAttackController : MonoBehaviour
         HeroController = GetComponent<Hero>();
     }
 
-    public bool TryAttack()
+    public EnemyController TryAttack()
     {
         var enemyCollidersInRange = new List<Collider2D>();
         var enemyFilter = new ContactFilter2D { layerMask = 1 << 8, useLayerMask = true };
         var numEnemiesInRange = attackRadius.OverlapCollider(enemyFilter, enemyCollidersInRange);
         if (numEnemiesInRange <= 0)
         {
-            return false;
+            return null;
         }
         var enemiesInRange = enemyCollidersInRange.Select(enemy => enemy.GetComponent<EnemyController>()).ToList();
         EnemyController targetEnemy = DetermineTarget(enemiesInRange);
         Attack(targetEnemy);
-        return true;
+        return targetEnemy;
     }
 
     private EnemyController DetermineTarget(List<EnemyController> enemies)
@@ -57,6 +57,6 @@ public class HeroAttackController : MonoBehaviour
 
     protected void Attack(EnemyController targetEnemy)
     {
-        targetEnemy.getAttacked(HeroController.Damage, HeroController.AttackSplashRange);
+        targetEnemy.getAttacked(HeroController.Damage);
     }
 }
