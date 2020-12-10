@@ -23,7 +23,7 @@ public class EnemyController : MonoBehaviour
     public int goldValue = 1;
 
     public Hero CurrentHero = null;
-    private SideMenu resources = null;
+    private FundingWorkaround resources;
 
     private bool delaying = false;
     private int delayTimer = 10;
@@ -32,12 +32,13 @@ public class EnemyController : MonoBehaviour
 
     //Variables for this class to handle but which other classes need to know.
     public bool dead;
+    private bool drained = false;
     private int targetsPassed = 0;
     private float percentToNextWaypoint = 0;
 
     void Start()
     {
-        resources = GameObject.Find("Menu").GetComponent<SideMenu>();
+        resources = GetComponent<FundingWorkaround>();
         animator = GetComponent<Animator>();
         deathTimer = new WaitForSeconds(1.5f);
         dead = false;
@@ -175,14 +176,18 @@ public class EnemyController : MonoBehaviour
     {
         Health -= heroDamage;
         Debug.Log("I took " + heroDamage + " Damage and have " + Health + " Health left.");
-        if(Health <= 0)
+        if (Health <= 0)
         {
             dead = true;
             CurrentSpeed = 0;
             animator.SetTrigger("Death");
             StartCoroutine(DeathTimer());
-            resources.addGold(goldValue);
-            resources.addEXP(EXPValue);
+            if (!drained)
+            {
+                resources.setCoinage(goldValue);      //I don't know why this is broken, but no matter the workaround, 
+                resources.setExperience(EXPValue);
+                drained = true;            
+            }
         }
     }
 

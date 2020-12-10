@@ -37,8 +37,9 @@ public class Hero : MonoBehaviour
     public int Level;
     public int Experience;
     public int MaxHealth;
-    public int Health; 
-    public int HealAbility = 0;
+    public int Health;
+    private int Armor = 0;
+    private int HealAbility = 0;
     public float ReviveSpeed;
 
     //Connected Game Objects
@@ -146,6 +147,7 @@ public class Hero : MonoBehaviour
             {
                 MaxHealth += 10;
                 Health += 10;
+                Armor += 1;
                 Damage += 2;
             }
         }
@@ -185,7 +187,7 @@ public class Hero : MonoBehaviour
     }
     public void Hit(int damage)
     {
-        Health -= damage;
+        Health -= (damage - Armor);
         if (Health <= 0)
         {
             dead = true;

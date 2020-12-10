@@ -25,8 +25,14 @@ public class SideMenu : MonoBehaviour
     public Text GoldResourceText;
     public Text EXPResourceText;
     public GameObject RangeTracker;
+    public TextMeshProUGUI levelupButton;
+    public TextMeshProUGUI reviveButtonText;
 
     private Hero SelectedHero;
+    private FundingWorkaround funds;
+
+    private int moneymoney = 0;
+    private int Knawledge = 0;
 
     public SideMenu()
     {
@@ -35,8 +41,10 @@ public class SideMenu : MonoBehaviour
 
     private void Start()
     {
+        funds = GetComponent<FundingWorkaround>();
         ReviveButton.SetActive(false);
         fundsVoidbox.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     void Update()
@@ -66,6 +74,9 @@ public class SideMenu : MonoBehaviour
 
         RangeTracker.transform.localScale -= RangeTracker.transform.localScale;
         RangeTracker.transform.localScale += new Vector3(SelectedHero.Range, SelectedHero.Range, 1);
+
+
+        changeFunds();
     }
 
     public void Set(Hero h)
@@ -91,6 +102,8 @@ public class SideMenu : MonoBehaviour
             gameEXP -= SelectedHero.WhatIsLevelCost();
             EXPResourceText.text = gameEXP.ToString();
             SelectedHero.HeroLevelUp();
+            levelupButton.text = SelectedHero.WhatIsLevelCost().ToString();
+            reviveButtonText.text = SelectedHero.WhatIsReviveCost().ToString();
         }
     }
 
@@ -106,6 +119,7 @@ public class SideMenu : MonoBehaviour
             gameGold -= SelectedHero.WhatIsReviveCost();
             GoldResourceText.text = gameGold.ToString();
             SelectedHero.Revive();
+            reviveButtonText.text = SelectedHero.WhatIsReviveCost().ToString();
         }
     }
 
@@ -119,6 +133,27 @@ public class SideMenu : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void moneyCheat()
+    {
+        moneymoney++;
+        Debug.Log("The chest got clicked on, you have clicked on it " + moneymoney + " times.");
+        if(moneymoney == 5)
+        {
+            addGold(5000);
+            GoldResourceText.text = gameGold.ToString();
+        }
+    }
+    
+    public void EXPCheat()
+    {
+        Knawledge++;
+        if(Knawledge == 7)
+        {
+            addEXP(5000);
+            EXPResourceText.text = gameEXP.ToString();
+        }
+    }
+
     public void addGold(int gold)
     {
         gameGold += gold;
@@ -127,5 +162,14 @@ public class SideMenu : MonoBehaviour
     public void addEXP(int EXP)
     {
         gameEXP += EXP;
+    }
+
+    private void changeFunds()
+    {
+        gameGold += funds.collectCoinage();
+        gameEXP += funds.collectExperience();
+
+        GoldResourceText.text = gameGold.ToString();
+        EXPResourceText.text = gameEXP.ToString();
     }
 }

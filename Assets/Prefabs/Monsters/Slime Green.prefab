@@ -175,6 +175,7 @@ MonoBehaviour:
   Damage: 5
   goldValue: 1
   CurrentHero: {fileID: 0}
+  dead: 0
 --- !u!61 &-2969365102220645886
 BoxCollider2D:
   m_ObjectHideFlags: 0
