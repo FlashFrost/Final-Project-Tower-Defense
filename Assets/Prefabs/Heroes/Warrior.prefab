@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 991096114224791784}
   - component: {fileID: 8448375093002132007}
   m_Layer: 0
-  m_Name: 'Detection Range '
+  m_Name: Detection Range
   m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

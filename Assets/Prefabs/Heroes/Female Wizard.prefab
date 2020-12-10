@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 4
   Image: {fileID: -577299125327339110, guid: facb17cb4ee4a6745be9e4df77313e05, type: 3}
-  Name: Wizard
+  Name: Wizard2
   Damage: 15
   Range: 10
   AttackSpeed: 1

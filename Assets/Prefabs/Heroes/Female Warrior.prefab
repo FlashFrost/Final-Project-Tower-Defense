@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 3
   Image: {fileID: -3218375782788562643, guid: ff87f444f9de47b459fde9c52ba021a9, type: 3}
-  Name: Warrior
+  Name: Warrior2
   Damage: 20
   Range: 5
   AttackSpeed: 1

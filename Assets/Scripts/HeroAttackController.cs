@@ -10,6 +10,11 @@ public class HeroAttackController : MonoBehaviour
     private Hero HeroController;
     private void Awake()
     {
+        if (transform.Find("Detection Range") == null)
+        {
+            Debug.Log(GetComponent<Hero>().Name);
+        }
+
         attackRadius = transform.Find("Detection Range").GetComponent<Collider2D>();
         if(attackRadius == null)
         {

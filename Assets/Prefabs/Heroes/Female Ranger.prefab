@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4176561502196584830}
   - component: {fileID: 7787005206375256811}
   m_Layer: 0
-  m_Name: 'Detection Range '
+  m_Name: Detection Range
   m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 1
   Image: {fileID: -5298796914983542145, guid: e8ba8e3bf4df13845bb094fab0066eb0, type: 3}
-  Name: Ranger
+  Name: Ranger2
   Damage: 10
   Range: 15
   AttackSpeed: 2

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5193432845269449330}
   - component: {fileID: 972770087373681319}
   m_Layer: 0
-  m_Name: 'Detection Range '
+  m_Name: Detection Range
   m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

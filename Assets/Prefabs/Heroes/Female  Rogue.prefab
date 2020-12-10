@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9171397203406777334}
   - component: {fileID: 4265421026245038801}
   m_Layer: 0
-  m_Name: 'Detection Range '
+  m_Name: Detection Range
   m_TagString: Detection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 2
   Image: {fileID: -5920187221140060509, guid: f6f514eb52025ac4cb0437ebddc76ce7, type: 3}
-  Name: Rogue
+  Name: Rogue2
   Damage: 5
   Range: 15
   AttackSpeed: 5
