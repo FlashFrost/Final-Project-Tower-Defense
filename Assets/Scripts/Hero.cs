@@ -41,7 +41,7 @@ public class Hero : MonoBehaviour
     
     private int reviveCost = 50;
     private Animator animator;
-    private bool Gender;
+    private bool dead = false;
 
     private const int monsterLayer = 8;
     private HeroState myState;
@@ -147,6 +147,7 @@ public class Hero : MonoBehaviour
     public void Hit(int damage)
     {
         Health -= damage;
+        dead = true;
         if (Health <= 0)
         {
             Health = 0;
@@ -157,7 +158,7 @@ public class Hero : MonoBehaviour
     //Begin Combat handling code.
     public void OnEnemyEnter()
     {
-        if (myState != HeroState.Idle || Health == 0)
+        if (myState != HeroState.Idle || Health <= 0 || dead == true)
         {
             return;
         }
@@ -166,7 +167,7 @@ public class Hero : MonoBehaviour
     }
     private void TryAttack()
     {
-        if (!attackController.TryAttack())
+        if (!attackController.TryAttack() || dead)
         {
             return;
         }
