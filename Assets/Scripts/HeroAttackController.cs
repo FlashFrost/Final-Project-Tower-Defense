@@ -36,9 +36,16 @@ public class HeroAttackController : MonoBehaviour
     private EnemyController DetermineTarget(List<EnemyController> enemies)
     {
         EnemyController furthestEnemy = enemies[0];
-        for(int i = 1; i < enemies.Count; i++)
+        for (int i = 1; i < enemies.Count; i++)
         {
-            furthestEnemy = EnemyController.CompareGreaterPathProgress(furthestEnemy, enemies[i]);
+            if (furthestEnemy.Health <= 0)
+            {
+                furthestEnemy = enemies[i];
+            }
+            else
+            {
+                furthestEnemy = EnemyController.CompareGreaterPathProgress(furthestEnemy, enemies[i]);
+            }
         }
         return furthestEnemy;
     }

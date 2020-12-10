@@ -26,11 +26,13 @@ public class EnemyController : MonoBehaviour
     private bool delaying = false;
     private int delayTimer = 10;
     private int currentDelay = 0;
+    private WaitForSeconds deathTimer;
     private int targetsPassed = 0;
     private float percentToNextWaypoint = 0;
     void Start()
     {
         animator = GetComponent<Animator>();
+        deathTimer = new WaitForSeconds(1.5f);
     }
 
     // Update is called once per frame
@@ -146,7 +148,19 @@ public class EnemyController : MonoBehaviour
     public void getAttacked(int heroDamage, float heroSplash)
     {
         Health -= heroDamage;
+        if(Health <= 0)
+        {
+            CurrentSpeed = 0;
+            animator.SetTrigger("Death");
+            StartCoroutine(DeathTimer());
+        }
         determineSplash(heroSplash);
+    }
+
+    private IEnumerator DeathTimer()
+    {
+        yield return deathTimer;
+        Destroy(gameObject);
     }
 
     private void determineSplash(float splashRadius)
