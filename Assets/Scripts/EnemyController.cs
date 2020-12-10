@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
     public int goldValue = 1;
 
     public Hero CurrentHero = null;
+    private SideMenu resources = null;
 
     private bool delaying = false;
     private int delayTimer = 10;
@@ -30,21 +31,28 @@ public class EnemyController : MonoBehaviour
     private WaitForSeconds deathTimer;
 
     //Variables for this class to handle but which other classes need to know.
-    private bool dead = false;
+    public bool dead;
     private int targetsPassed = 0;
     private float percentToNextWaypoint = 0;
 
     void Start()
     {
+        resources = GameObject.Find("Menu").GetComponent<SideMenu>();
         animator = GetComponent<Animator>();
         deathTimer = new WaitForSeconds(1.5f);
+        dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (_gameOver) return;
-        if(delaying)    // Let the Hero die before continuing to move.
+
+        if(dead)
+        {
+            StartCoroutine(DeathTimer());
+        }
+        if (delaying)    // Let the Hero die before continuing to move.
         {
             currentDelay++;
             if(currentDelay >= delayTimer)
@@ -67,6 +75,17 @@ public class EnemyController : MonoBehaviour
                 return;
             }
         }
+
+        if (CurrentHero != null)
+        {
+            if (CurrentHero.Health <= 0)
+            {
+                Attacking = false;
+                delaying = true;
+            }
+        }
+
+        
 
         var vectorToGo = (_currentTarget.transform.position - gameObject.transform.position);
 
@@ -155,17 +174,16 @@ public class EnemyController : MonoBehaviour
     public void getAttacked(int heroDamage)
     {
         Health -= heroDamage;
+        Debug.Log("I took " + heroDamage + " Damage and have " + Health + " Health left.");
         if(Health <= 0)
         {
             dead = true;
             CurrentSpeed = 0;
             animator.SetTrigger("Death");
             StartCoroutine(DeathTimer());
+            resources.addGold(goldValue);
+            resources.addEXP(EXPValue);
         }
-    }
-    public bool IsDead()
-    {
-        return dead;
     }
 
     private IEnumerator DeathTimer()

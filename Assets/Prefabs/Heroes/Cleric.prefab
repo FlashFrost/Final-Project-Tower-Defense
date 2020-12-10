@@ -194,7 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18fed0b5133e4a439eeb54bffcbf250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyType: 0
   Image: {fileID: -2551392488480896889, guid: bdcef770c45ea1c419ba49507e2af48c, type: 3}
   Name: Cleric
   Damage: 5
@@ -204,10 +203,11 @@ MonoBehaviour:
   Experience: 0
   MaxHealth: 0
   Health: 20
-  AttackSplashRange: 0
-  HealAbility: 0
+  HealAbility: 1
+  ReviveSpeed: 0
   Position: {fileID: 0}
   myDetectionRing: {fileID: 6132223413885729165}
+  MyType: 0
 --- !u!114 &3769708927213368261
 MonoBehaviour:
   m_ObjectHideFlags: 0

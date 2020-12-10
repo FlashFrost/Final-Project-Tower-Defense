@@ -1264,7 +1264,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 335681064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760899475}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &335681064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11217,81 +11229,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8828640371898064235, guid: 0c978336997d44649943d905f4ba026c, type: 3}
   m_PrefabInstance: {fileID: 595716202}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &596928400
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 596928401}
-  - component: {fileID: 596928403}
-  - component: {fileID: 596928402}
-  m_Layer: 0
-  m_Name: UI Hero Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &596928401
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596928400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 742.3609, y: 310.92255, z: -35.86959}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &596928402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596928400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18fed0b5133e4a439eeb54bffcbf250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Image: {fileID: 0}
-  Name: NotAHero
-  Damage: 0
-  Range: 0
-  AttackSpeed: 0
-  Level: 0
-  Experience: 0
-  MaxHealth: 0
-  Health: 0
-  HealAbility: 0
-  ReviveSpeed: 0
-  Position: {fileID: 0}
-  myDetectionRing: {fileID: 0}
-  levelupCostText: {fileID: 0}
-  GoldresourceText: {fileID: 0}
-  EXPResourceText: {fileID: 0}
-  reviveCostText: {fileID: 0}
-  reviveButton: {fileID: 0}
-  MyType: 1
---- !u!114 &596928403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596928400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22707c4ab31a6b84d9911f84fe5497e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &598392889
 GameObject:
   m_ObjectHideFlags: 0
@@ -12096,7 +12033,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 713629536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760899479}
+        m_TargetAssemblyTypeName: SideMenu, Assembly-CSharp
+        m_MethodName: TryToRevive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &713629536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12304,7 +12253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &760899476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12394,6 +12343,10 @@ MonoBehaviour:
   AttackSpeed: {fileID: 716043577}
   Level: {fileID: 1942692806}
   Health: {fileID: 2078783729}
+  ReviveButton: {fileID: 713629533}
+  fundsVoidbox: {fileID: 2114622487}
+  GoldResourceText: {fileID: 1801203912}
+  EXPResourceText: {fileID: 1434279396}
   RangeTracker: {fileID: 1343012593}
 --- !u!1 &780496939
 GameObject:
@@ -12656,7 +12609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 903075867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760899479}
+        m_TargetAssemblyTypeName: SideMenu, Assembly-CSharp
+        m_MethodName: TryToLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &903075867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13756,13 +13721,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 596928400}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 760899479}
+        m_TargetAssemblyTypeName: SideMenu, Assembly-CSharp
+        m_MethodName: CloseFundbox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15539,7 +15504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2114622488
 RectTransform:
   m_ObjectHideFlags: 0

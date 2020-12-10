@@ -44,12 +44,6 @@ public class Hero : MonoBehaviour
     //Connected Game Objects
     public StartableLocation Position;
     public GameObject myDetectionRing;
-    public TextMeshProUGUI levelupCostText;
-    public TextMeshProUGUI GoldresourceText;
-    public TextMeshProUGUI EXPResourceText;
-    public TextMeshProUGUI reviveCostText;
-    public GameObject reviveButton;
-    public GameObject fundsVoidbox;
     
     //Internal Variables
     private int reviveCost = 50;
@@ -64,14 +58,11 @@ public class Hero : MonoBehaviour
 
     //Booleans to determine accessibility to functions.
     private bool dead = false;
-    private bool healing = false;
-    private bool attacking = false;
     private bool healLocked = false;
 
     private HeroState myState;
     public HeroType MyType;
     private HeroAttackController attackController;
-    private EnemyController attackedEnemy;
 
     private void Start()
     {
@@ -81,21 +72,11 @@ public class Hero : MonoBehaviour
         myState = HeroState.Idle;
         cooldownTime = new WaitForSeconds(1 / AttackSpeed);
         attackController = GetComponent<HeroAttackController>();
-        reviveButton.SetActive(false);
-        fundsVoidbox.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Health <= 0)
-        {
-            reviveButton.SetActive(true);
-        }
-        else
-        {
-            reviveButton.SetActive(false);
-        }
         if (MyType == HeroType.Cleric && myState == HeroState.Idle && healLocked == false)
         {
             TryHealing();
@@ -115,38 +96,14 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public void CloseFundbox()
+    public int WhatIsReviveCost()
     {
-        fundsVoidbox.SetActive(false);
+        return reviveCost;
     }
 
-    public void TryToLevel()
+    public int WhatIsLevelCost()
     {
-        if(EXP < levelCost)
-        {
-            fundsVoidbox.SetActive(true);
-            return;
-        }
-        else
-        {
-            EXP -= levelCost;
-            EXPResourceText.text = EXP.ToString();
-            HeroLevelUp();
-        }
-    }
-    public void TryToRevive()
-    {
-        if(gold < reviveCost)
-        {
-            fundsVoidbox.SetActive(true);
-            return;
-        }
-        else
-        {
-            gold -= reviveCost;
-            GoldresourceText.text = gold.ToString();
-            Revive();
-        }
+        return levelCost;
     }
 
     public void HeroLevelUp()
@@ -215,9 +172,11 @@ public class Hero : MonoBehaviour
                 Damage += 15;
             }
         }
+
+        cooldownTime = new WaitForSeconds(1 / AttackSpeed);
     }
 
-    private void Revive()
+    public void Revive()
     {
         Health = MaxHealth;
         dead = false;
@@ -227,9 +186,9 @@ public class Hero : MonoBehaviour
     public void Hit(int damage)
     {
         Health -= damage;
-        dead = true;
         if (Health <= 0)
         {
+            dead = true;
             Health = 0;
             animator.SetTrigger("Death");
         }
@@ -238,7 +197,7 @@ public class Hero : MonoBehaviour
     //Begin Combat handling code.
     public void OnEnemyEnter()
     {
-        if (myState != HeroState.Idle || Health <= 0 || dead == true)
+        if (myState != HeroState.Idle || dead == true)
         {
             return;
         }
@@ -247,18 +206,12 @@ public class Hero : MonoBehaviour
     }
     private void TryAttack()
     {
-        attackedEnemy = attackController.TryAttack();
-        if (attackedEnemy == null || dead)
+        if (!attackController.TryAttack() || dead)
         {
             return;
         }
         animator.SetTrigger("Attack");
         myState = HeroState.Cooldown;
-        if(attackedEnemy.IsDead())
-        {
-            gold += attackedEnemy.goldValue;
-            EXP += attackedEnemy.EXPValue;
-        }
         StartCoroutine(CooldownTimer());
     }
 
@@ -270,14 +223,10 @@ public class Hero : MonoBehaviour
             if (heroes[i].Health > 0 && heroes[i].Health < heroes[i].MaxHealth )
             {
                 myState = HeroState.Healing;
-                healing = true;
                 healLocked = true;
                 heroes[i].Health += HealAbility;
-                StartCoroutine(CooldownTimer());
-            }
-            else
-            {
-                healing = false;
+                animator.SetTrigger("Interrupt");
+                StartCoroutine(HealCooldownTimer());
             }
         }
     }
@@ -286,14 +235,15 @@ public class Hero : MonoBehaviour
     {
         yield return cooldownTime;
         myState = HeroState.Idle;
-        if (attacking)
-        {
-            TryAttack();
-            healLocked = false;
-        }
-        else if (healing)
-        {
-            TryHealing();
-        }
+        healLocked = false;
+        TryAttack();
+    }    
+
+    private IEnumerator HealCooldownTimer()
+    {
+        yield return cooldownTime;
+        myState = HeroState.Idle;
+        TryHealing();
     }
+
 }

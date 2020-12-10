@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SideMenu : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class SideMenu : MonoBehaviour
     public Text Level;
     public Text Health;
 
+    public static int gameGold;
+    public static int gameEXP;
+
+    public GameObject ReviveButton;
+    public GameObject fundsVoidbox;
+    public Text GoldResourceText;
+    public Text EXPResourceText;
     public GameObject RangeTracker;
 
     private Hero SelectedHero;
@@ -24,16 +32,24 @@ public class SideMenu : MonoBehaviour
     {
         Instance = this;
     }
-    
+
+    private void Start()
+    {
+        ReviveButton.SetActive(false);
+        fundsVoidbox.SetActive(false);
+    }
+
     void Update()
     {
         if (SelectedHero.Health > 0)
         {
             Backdrop.color = new Color(34/255f, 139/255f, 34/255f, 255/255f); //forest green
+            ReviveButton.SetActive(false);
         }
         else
         {
             Backdrop.color = Color.red;
+            ReviveButton.SetActive(true);
         }
 
         Picture.sprite = SelectedHero.Image;
@@ -63,5 +79,53 @@ public class SideMenu : MonoBehaviour
         }
         gameObject.SetActive(true);
     }
+    public void TryToLevel()
+    {
+        if (gameEXP < SelectedHero.WhatIsLevelCost())
+        {
+            fundsVoidbox.SetActive(true);
+            return;
+        }
+        else
+        {
+            gameEXP -= SelectedHero.WhatIsLevelCost();
+            EXPResourceText.text = gameEXP.ToString();
+            SelectedHero.HeroLevelUp();
+        }
+    }
 
+    public void TryToRevive()
+    {
+        if (gameGold < SelectedHero.WhatIsReviveCost())
+        {
+            fundsVoidbox.SetActive(true);
+            return;
+        }
+        else
+        {
+            gameGold -= SelectedHero.WhatIsReviveCost();
+            GoldResourceText.text = gameGold.ToString();
+            SelectedHero.Revive();
+        }
+    }
+
+    public void CloseFundbox()  //Closed by an external object so multiple instances are not attempted to be closed.
+    {
+        fundsVoidbox.SetActive(false);
+    }
+
+    public void CloseSidemenu()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void addGold(int gold)
+    {
+        gameGold += gold;
+    }
+
+    public void addEXP(int EXP)
+    {
+        gameEXP += EXP;
+    }
 }

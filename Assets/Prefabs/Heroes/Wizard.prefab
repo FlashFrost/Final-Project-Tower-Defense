@@ -293,20 +293,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18fed0b5133e4a439eeb54bffcbf250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyType: 4
   Image: {fileID: -2442318890399168463, guid: facb17cb4ee4a6745be9e4df77313e05, type: 3}
   Name: Wizard
-  Damage: 15
+  Damage: 25
   Range: 10
   AttackSpeed: 1
   Level: 0
   Experience: 0
   MaxHealth: 0
   Health: 15
-  AttackSplashRange: 0
   HealAbility: 0
+  ReviveSpeed: 0
   Position: {fileID: 0}
   myDetectionRing: {fileID: 5193432845269449329}
+  MyType: 4
 --- !u!114 &-2457822818573289347
 MonoBehaviour:
   m_ObjectHideFlags: 0
