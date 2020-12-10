@@ -170,6 +170,7 @@ public class Hero : MonoBehaviour
         {
             return;
         }
+        animator.SetTrigger("Attack");
         myState = HeroState.Cooldown;
         StartCoroutine(CooldownTimer());
     }
