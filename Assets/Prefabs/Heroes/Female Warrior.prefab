@@ -154,7 +154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!61 &3747991385604600197
 BoxCollider2D:
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 3
   Image: {fileID: -3218375782788562643, guid: ff87f444f9de47b459fde9c52ba021a9, type: 3}
-  Name: Warrior2
-  Damage: 20
+  Name: Warrior
+  Damage: 10
   Range: 5
   AttackSpeed: 1
   Level: 0

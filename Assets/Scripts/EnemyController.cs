@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    private static bool _gameOver = false;
     private Target _currentTarget = null;
     private bool started = false;
 
@@ -29,6 +30,7 @@ public class EnemyController : MonoBehaviour
     private WaitForSeconds deathTimer;
     private int targetsPassed = 0;
     private float percentToNextWaypoint = 0;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -38,6 +40,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_gameOver) return;
         if(delaying)    // Let the Hero die before continuing to move.
         {
             currentDelay++;
@@ -70,7 +73,8 @@ public class EnemyController : MonoBehaviour
             targetsPassed++;
             if (_currentTarget == null)
             {
-                //Player looses, code needs to go here
+                _gameOver = true;
+                LevelController.Instance.EndGame();
                 return;
             }
 

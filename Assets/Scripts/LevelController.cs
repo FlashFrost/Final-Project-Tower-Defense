@@ -11,6 +11,7 @@ public class LevelController : MonoBehaviour
 
     public Button StartButton;
     public bool RunningLevel = false;
+    public Image GameOverImage;
 
     [Header("Heroes")]
     public Hero MaleCleric;
@@ -26,6 +27,11 @@ public class LevelController : MonoBehaviour
 
     [Header("Enemies")]
     public EnemyController Orc;
+    public EnemyController Slime;
+    public EnemyController Rat;
+    public EnemyController CloakedOrc;
+    public EnemyController Statue;
+    public EnemyController Minutour;
 
     private List<Hero> _heroes;
 
@@ -113,13 +119,23 @@ public class LevelController : MonoBehaviour
         StartCoroutine(RunWaves());
     }
 
+    public void EndGame()
+    {
+        GameOverImage.gameObject.SetActive(true);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
     IEnumerator RunWaves()
     {
         while (true)
         {
             if (RunningLevel)
             {
-                Instantiate(Orc, PathingController.Path[0].gameObject.transform.position, Quaternion.identity);
+                Instantiate(Minutour, PathingController.Path[0].gameObject.transform.position, Quaternion.identity);
                 yield return new WaitForSeconds(3f);
             }            
         }

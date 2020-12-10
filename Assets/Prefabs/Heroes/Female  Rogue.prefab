@@ -253,7 +253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!61 &9171397203437783666
 BoxCollider2D:
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 2
   Image: {fileID: -5920187221140060509, guid: f6f514eb52025ac4cb0437ebddc76ce7, type: 3}
-  Name: Rogue2
+  Name: Rogue
   Damage: 5
   Range: 15
   AttackSpeed: 5

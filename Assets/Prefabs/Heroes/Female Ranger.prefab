@@ -253,7 +253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!61 &4176561502259464495
 BoxCollider2D:
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 1
   Image: {fileID: -5298796914983542145, guid: e8ba8e3bf4df13845bb094fab0066eb0, type: 3}
-  Name: Ranger2
+  Name: Ranger
   Damage: 10
   Range: 15
   AttackSpeed: 2

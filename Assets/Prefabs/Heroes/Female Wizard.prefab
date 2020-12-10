@@ -253,7 +253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!61 &6934218819307370783
 BoxCollider2D:
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyType: 4
   Image: {fileID: -577299125327339110, guid: facb17cb4ee4a6745be9e4df77313e05, type: 3}
-  Name: Wizard2
+  Name: Wizard
   Damage: 15
   Range: 10
   AttackSpeed: 1
