@@ -26,6 +26,8 @@ public class EnemyController : MonoBehaviour
     private bool delaying = false;
     private int delayTimer = 10;
     private int currentDelay = 0;
+    private int targetsPassed = 0;
+    private float percentToNextWaypoint = 0;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -63,6 +65,7 @@ public class EnemyController : MonoBehaviour
         if (vectorToGo.magnitude < 0.1)
         {
             _currentTarget = PathingController.GetNextTarget(_currentTarget);
+            targetsPassed++;
             if (_currentTarget == null)
             {
                 //Player looses, code needs to go here
@@ -71,6 +74,7 @@ public class EnemyController : MonoBehaviour
 
             vectorToGo = (_currentTarget.transform.position - gameObject.transform.position);
         }
+        percentToNextWaypoint = vectorToGo.magnitude;
 
         gameObject.transform.position += Vector3.Normalize(vectorToGo) * (CurrentSpeed / 1000f);
         sr.flipX = vectorToGo.x < 0;
@@ -123,5 +127,19 @@ public class EnemyController : MonoBehaviour
         }
 
         _attackLock = false;
+    }
+
+    public static EnemyController CompareGreaterPathProgress(EnemyController enemy1, EnemyController enemy2)
+    {
+        if (enemy1.targetsPassed > enemy2.targetsPassed)
+            return enemy1;
+        if (enemy1.targetsPassed < enemy2.targetsPassed)
+            return enemy2;
+        if (enemy1.percentToNextWaypoint < enemy2.percentToNextWaypoint)
+            return enemy1;
+        if (enemy1.percentToNextWaypoint > enemy2.percentToNextWaypoint)
+            return enemy2;
+        else
+            return enemy1;
     }
 }

@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class EnemyDetector : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    HeroTargettingController myController;
+
+    private void Awake()
     {
-        
+        myController = GetComponentInParent<HeroTargettingController>();
+        if(myController == null)
+        {
+            myController = transform.parent.gameObject.AddComponent<HeroTargettingController>();
+            Debug.LogWarning("Warning! No controller on parent so default is added", gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+       if(other.gameObject.layer != 8)
+       {
+            return;
+       }
+
+        myController.OnEnemyEnter();
     }
+
+
 }

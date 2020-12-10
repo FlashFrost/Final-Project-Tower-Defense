@@ -29,8 +29,7 @@ public class Hero : MonoBehaviour
 
     public StartableLocation Position;
     public GameObject myDetectionRing;
-
-
+    
     private int reviveCost = 50;
     private Animator animator;
     private bool Gender;
@@ -106,6 +105,7 @@ public class Hero : MonoBehaviour
             if (Level >= 1)
             {
                 Range += 1;
+                myDetectionRing.transform.localScale = new Vector3(Range, Range, 1);
             }
         }
         else if(MyType == HeroType.Warrior)
