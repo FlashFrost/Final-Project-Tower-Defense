@@ -75,7 +75,8 @@ public class SideMenu : MonoBehaviour
         RangeTracker.transform.localScale -= RangeTracker.transform.localScale;
         RangeTracker.transform.localScale += new Vector3(SelectedHero.Range, SelectedHero.Range, 1);
 
-
+        levelupButton.text = SelectedHero.WhatIsLevelCost().ToString() + " Experience";
+        reviveButtonText.text = SelectedHero.WhatIsReviveCost().ToString() + " Gold";
         changeFunds();
     }
 
@@ -102,8 +103,6 @@ public class SideMenu : MonoBehaviour
             gameEXP -= SelectedHero.WhatIsLevelCost();
             EXPResourceText.text = gameEXP.ToString();
             SelectedHero.HeroLevelUp();
-            levelupButton.text = SelectedHero.WhatIsLevelCost().ToString();
-            reviveButtonText.text = SelectedHero.WhatIsReviveCost().ToString();
         }
     }
 
@@ -119,7 +118,6 @@ public class SideMenu : MonoBehaviour
             gameGold -= SelectedHero.WhatIsReviveCost();
             GoldResourceText.text = gameGold.ToString();
             SelectedHero.Revive();
-            reviveButtonText.text = SelectedHero.WhatIsReviveCost().ToString();
         }
     }
 
