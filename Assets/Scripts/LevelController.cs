@@ -26,8 +26,8 @@ public class LevelController : MonoBehaviour
     public Hero FemaleWizard;
 
     [Header("Enemies")]
-    public EnemyController Orc;
     public EnemyController Slime;
+    public EnemyController Orc;
     public EnemyController Rat;
     public EnemyController CloakedOrc;
     public EnemyController Statue;
@@ -122,6 +122,7 @@ public class LevelController : MonoBehaviour
     public void EndGame()
     {
         GameOverImage.gameObject.SetActive(true);
+        RunningLevel = false;
     }
 
     public void MainMenu()
@@ -131,14 +132,47 @@ public class LevelController : MonoBehaviour
 
     IEnumerator RunWaves()
     {
+        var enemyOptions = new List<EnemyController> { Slime, Orc, Rat, CloakedOrc, Statue, Minutour};
+        var enemyWeights = new List<int> { 1, 2, 5, 10, 20, 20};
+        int waveCount = 5;
+        var random = new System.Random();
+
         while (true)
         {
             if (RunningLevel)
             {
-                Instantiate(Minutour, PathingController.Path[0].gameObject.transform.position, Quaternion.identity);
-                yield return new WaitForSeconds(3f);
+                //calculate wave generation
+                int remainingWaveCount = waveCount;
+                List<EnemyController> wave = new List<EnemyController>();
+                var currentEnemyOptions = enemyOptions.ToList();
+                var currentEnemyWeights = enemyWeights.ToList();
+                while (remainingWaveCount > 0)
+                {
+                    for (var i = 0; i < currentEnemyWeights.Count; ++i)
+                    {
+                        if (currentEnemyWeights[i] > remainingWaveCount)
+                        {
+                            currentEnemyWeights.RemoveAt(i);
+                            currentEnemyOptions.RemoveAt(i);
+                            --i;
+                        }
+                    }
+
+                    var enemy = random.Next(currentEnemyWeights.Count);
+                    wave.Add(currentEnemyOptions[enemy]);
+                    remainingWaveCount -= currentEnemyWeights[enemy];
+                }
+
+                var pulse = 20f / wave.Count();
+                foreach (var enemy in wave)
+                {
+                    Instantiate(enemy, PathingController.Path[0].gameObject.transform.position, Quaternion.identity);
+                    yield return new WaitForSeconds(pulse);
+                }
+
+                waveCount += 3;
+                yield return new WaitForSeconds(10f);
             }            
         }
-        yield break;
     }
 }
