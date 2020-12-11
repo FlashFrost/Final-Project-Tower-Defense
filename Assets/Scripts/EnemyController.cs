@@ -144,6 +144,8 @@ public class EnemyController : MonoBehaviour
             {
                 CurrentHero.Hit(Damage);
                 animator.SetTrigger("Attack");
+                AudioController.Instance.PlayEnemyStab();
+
                 if (AttackSpeed <= 0)
                 {
                     Attacking = false;
@@ -178,6 +180,7 @@ public class EnemyController : MonoBehaviour
         Debug.Log("I took " + heroDamage + " Damage and have " + Health + " Health left.");
         if (Health <= 0)
         {
+            AudioController.Instance.PlayEnemyDeath();
             dead = true;
             CurrentSpeed = 0;
             animator.SetTrigger("Death");

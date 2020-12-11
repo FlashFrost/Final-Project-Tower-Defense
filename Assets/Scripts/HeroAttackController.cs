@@ -57,6 +57,18 @@ public class HeroAttackController : MonoBehaviour
 
     protected void Attack(EnemyController targetEnemy)
     {
+        if (HeroController.MyType == Hero.HeroType.Warrior || HeroController.MyType == Hero.HeroType.Rogue)
+        {
+            AudioController.Instance.PlayHeroStab();
+        }
+        else if (HeroController.MyType == Hero.HeroType.Wizard || HeroController.MyType == Hero.HeroType.Cleric)
+        {
+            AudioController.Instance.PlayHeroMagic();
+        }
+        else if (HeroController.MyType == Hero.HeroType.Ranger)
+        {
+            AudioController.Instance.PlayHeroShoot();
+        }
         targetEnemy.getAttacked(HeroController.Damage);
     }
 }

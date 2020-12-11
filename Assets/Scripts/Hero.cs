@@ -193,6 +193,7 @@ public class Hero : MonoBehaviour
             dead = true;
             Health = 0;
             animator.SetTrigger("Death");
+            AudioController.Instance.PlayHeroDeath();
         }
     }
 

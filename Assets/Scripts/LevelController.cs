@@ -163,9 +163,12 @@ public class LevelController : MonoBehaviour
                     remainingWaveCount -= currentEnemyWeights[enemy];
                 }
 
+                AudioController.Instance.PlayWaveStart();
+
                 var pulse = 20f / wave.Count();
                 foreach (var enemy in wave)
                 {
+                    if (enemy == Minutour) AudioController.Instance.PlayMinotarRoar();
                     Instantiate(enemy, PathingController.Path[0].gameObject.transform.position, Quaternion.identity);
                     yield return new WaitForSeconds(pulse);
                 }
